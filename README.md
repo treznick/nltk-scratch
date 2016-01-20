@@ -5,9 +5,10 @@
   1. clone the repo: `git clone git@github.com:treznick/nltk-scratch.git`
   2. set up an upstream remote: `git remote add upstream git@github.com:treznick/nltk-scratch.git`
     - Periodically sync with upstream. Rebase and PR changes as necessary
-  3. run the setup script: `./setup.sh`
-  4. activate the virtualenv: `workon $(cat .venv)`
-  5. run jupyter: `jupyter notebook`
+  3. run the setup script: `./bin/setup.sh`
+  4. run the download script to get the book data: `./bin/download-data.sh book`
+  5. activate the virtualenv: `workon $(cat .venv)`
+  6. run jupyter: `jupyter notebook`
 
 ## How to use virtualenvwrapper
 
