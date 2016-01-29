@@ -2,22 +2,30 @@ import unittest
 from tokenizer import Tokenizer
 
 class TestBasicProcessing(unittest.TestCase):
-    def test_tokenize(self):
-        # with spaces and upper case:
-        input_string1 =  "The rain in Spain"
-        tokenizer1 = Tokenizer(input_string1)
-        expected_list1 = ['the','rain','in','spain']
-        self.assertEqual(expected_list1, tokenizer1.tokenize())
-        # with other punctuation
-        input_string2 = "I love you. I know. Do you? Yes, I do"
-        tokenizer2 = Tokenizer(input_string2)
-        expected_list2 = ["i", "love", "you", "i", "know", "do", "you", "yes", "i", "do"]
-        self.assertEqual(expected_list2, tokenizer2.tokenize())
-        # with apostrophes
-        input_string3 = "You're a mean one, Mr. Grinch"
-        tokenizer3 = Tokenizer(input_string3)
-        expected_list3 = ["you're", "a", "mean", "one", "mr", "grinch"]
-        self.assertEqual(expected_list3, tokenizer3.tokenize())
+
+    def test_tokenize_with_spaces(self):
+        input_string =  "the rain in spain"
+        tokenizer = Tokenizer(input_string)
+        expected_list = ['the','rain','in','spain']
+        self.assertEqual(expected_list, tokenizer.tokenize())
+
+    def test_tokenize_with_spaces_and_downcasing(self):
+        input_string =  "The rain in Spain"
+        tokenizer = Tokenizer(input_string)
+        expected_list = ['the','rain','in','spain']
+        self.assertEqual(expected_list, tokenizer.tokenize())
+
+    def test_tokenize_with_other_punctuation(self):
+        input_string = "I love you. I know. Do you? Yes, I do"
+        tokenizer = Tokenizer(input_string)
+        expected_list = ["i", "love", "you", "i", "know", "do", "you", "yes", "i", "do"]
+        self.assertEqual(expected_list, tokenizer.tokenize())
+
+    def test_tokenize_with_apostrophes(self):
+        input_string = "You're a mean one, Mr. Grinch"
+        tokenizer = Tokenizer(input_string)
+        expected_list = ["you're", "a", "mean", "one", "mr", "grinch"]
+        self.assertEqual(expected_list, tokenizer.tokenize())
 
 if __name__ == '__main__':
     unittest.main()
