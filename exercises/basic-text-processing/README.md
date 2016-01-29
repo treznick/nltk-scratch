@@ -71,3 +71,11 @@ Watch it fail, and then write the method and make it pass
     * You need to do that by implementing the `tokenize` method inside of the `Tokenizer` class in `tokenizer.py`
       * Right now, the method just prints "Implement Me!", change that so that it passes all of the tests
     * The failures will return an AssertionError, which is what the testing framework raises when the assertion defined in the tests don't pass.
+    * When it passes, you'll know, because all of the `F`s in the output list will be replaced by `.`s. A completely successful run looks like this:
+    ```
+    ....
+    ----------------------------------------------------------------------
+    Ran 4 tests in 0.000s
+
+    OK
+    ```
