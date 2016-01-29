@@ -25,6 +25,13 @@ When you're done working on that project, run `deactivate`
 
 `jupyter notebook`
 
+## how to do exercises
+
+  1. `cd` into the relevant exercises directory, e.g. `cd exercises/<directory-name>`
+  2. look at the relevant README for the exercises: `less README.md`
+  3. That file will have some instructions for how to run the tests and where to add code to make them pass
+    
+
 ## Gotchas
 
   * Sometimes it's hard to compile some dependencies (specifically Tk), when installing matplotlib
